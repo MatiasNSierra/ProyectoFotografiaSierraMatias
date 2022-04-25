@@ -1,0 +1,67 @@
+/* animacion titulo del index */
+.text__general {
+    padding: 0.5em;
+    text-align: center;
+    position: relative;
+    font-size: $sizegeneral;
+    letter-spacing: 15px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    outline: none;
+    animation: animate 5s linear infinite;
+ 
+    @keyframes animate {
+     0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+     {
+       color: #0e3742;
+       text-shadow: none;
+     }
+     18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+       color: #fff;
+       text-shadow: 0 0 10px #03bcf4,
+                   0 0 20px #03bcf4,
+                   0 0 40px #03bcf4,
+                   0 0 80px #03bcf4,
+                   0 0 160px #03bcf4;
+     }
+ 
+  }
+  }
+ 
+ 
+  /* fin animacion titulo index */
+
+
+    /* titulos index */
+ .titulo__about {
+    text-align: center;
+    font-size: $sizegeneral;
+    max-width: 100%;
+    padding: 0.5em;
+    color: $colorprincipal;
+    animation: animate 5s linear infinite;
+  }
+
+  /* fin titulo index */
+
+
+  /* corresponde imagen y texto debajo del carrusel*/
+  .about__container  {
+    display:flex;
+    padding-bottom: 1em;
+   
+    img {
+     max-width: 100%;
+     padding: 0.3em;
+   }
+   p {
+     padding: 1em;
+     font-size: 2vw;
+     max-width: 100%;
+     color: $colorprincipal;
+   }
+   }
+    /* fin imagen y texto debajo del carrusel*/
+ 

@@ -1,13 +1,10 @@
- 
-  main {
-    /* background: #07252d; */
-    background-image: url(../images/dark-canvas.gif)
-   }
 
-   .navbar {
-    background-image: url(../images/dark-canvas.gif);
-  }
- 
-  footer {
-   background-image: url(../images/dark-canvas.gif);
-  }
+ $colorprincipal: whitesmoke;
+ $sizegeneral: 4vw;
+
+ @import "header.scss";
+ @import "main.scss";
+ @import "footer.scss";
+ @import "index.scss";
+ @import "galeriaconciertos.scss";
+
