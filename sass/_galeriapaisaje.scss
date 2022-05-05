@@ -1,0 +1,76 @@
+/* GAleria Paisajes utilizando mixin, extend y map */
+@mixin flexbox () {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin padding ($padding) {
+    padding: $padding;
+}
+
+@mixin flex ($flexporcentaje) {
+    flex: $flexporcentaje;
+}
+
+@mixin width ($width) {
+    width: $width;
+}
+
+.paisaje__row { 
+    @include padding (5px);
+    @include flexbox ();
+    
+}
+
+.paisaje__column {
+    
+    @include flex (25%);
+    @include padding(5px);
+
+    .pruebaextend {
+        @include width (100%);
+        margin-top: 5px;
+        
+    }
+   
+}
+
+
+
+@media (max-width: 800px) {
+    .paisaje__column {
+        flex: 50%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .paisaje__column {
+        flex: 100%;
+    }
+
+}
+
+$estilos:(
+    color: rgb(125, 221, 216),
+    fontstyle: italic,
+    fontsize: 2vw,
+);
+
+.paisaje__cabecera {
+    @extend .about__container;
+    
+
+    p{
+        color: map-get($estilos, color);
+        font-style: map-get($estilos, fontstyle);
+        font-size: map-get($estilos, fontsize);
+    }
+}
+
+.paisaje__title {
+    @extend .conciertos__title;
+    font-style: map-get($estilos,fontstyle);
+}
+
+/* FIN - GAleria Paisajes utilizando mixin, extend y map */

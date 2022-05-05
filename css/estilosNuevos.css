@@ -41,13 +41,13 @@ footer {
 
 /* fin titulo index */
 /* corresponde imagen y texto debajo del carrusel*/
-.about__container {
+.about__container, .paisaje__cabecera {
   display: flex;
   padding-bottom: 1em; }
-  .about__container img {
+  .about__container img, .paisaje__cabecera img {
     max-width: 100%;
     padding: 0.3em; }
-  .about__container p {
+  .about__container p, .paisaje__cabecera p {
     padding: 1em;
     font-size: 2vw;
     max-width: 100%;
@@ -55,7 +55,7 @@ footer {
 
 /* fin imagen y texto debajo del carrusel*/
 /* titulo galeria conciertos */
-.conciertos__title {
+.conciertos__title, .paisaje__title {
   text-align: center;
   color: whitesmoke;
   padding: 0.5em;
@@ -77,7 +77,7 @@ footer {
     justify-content: center;
     background-color: #03afff;
     border-radius: 4px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.7s ease-in-out;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
@@ -91,3 +91,34 @@ footer {
   .tall {
     grid-row: span 2; }
   /* fin galeria con grid de conciertos */ }
+
+/* GAleria Paisajes utilizando mixin, extend y map */
+.paisaje__row {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap; }
+
+.paisaje__column {
+  flex: 25%;
+  padding: 5px; }
+  .paisaje__column .pruebaextend {
+    width: 100%;
+    margin-top: 5px; }
+
+@media (max-width: 800px) {
+  .paisaje__column {
+    flex: 50%; } }
+
+@media (max-width: 600px) {
+  .paisaje__column {
+    flex: 100%; } }
+
+.paisaje__cabecera p {
+  color: #7dddd8;
+  font-style: italic;
+  font-size: 2vw; }
+
+.paisaje__title {
+  font-style: italic; }
+
+/* FIN - GAleria Paisajes utilizando mixin, extend y map */
