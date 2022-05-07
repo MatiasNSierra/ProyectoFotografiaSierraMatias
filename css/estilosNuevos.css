@@ -1,11 +1,27 @@
-header .navbar {
-  background-image: url(../images/dark-canvas.gif); }
+header {
+  font-family: "Amatic SC", cursive; }
+  header .navbar {
+    background-image: url(../images/dark-canvas.gif); }
+    header .navbar .collapse {
+      justify-content: center;
+      font-size: 1em; }
+
+.nav-item {
+  padding-right: 2em;
+  font-size: 2em; }
+
+.navbar-nav {
+  align-items: center;
+  font-size: 1em; }
 
 main {
   background-image: url(../images/dark-canvas.gif); }
 
 footer {
-  background-image: url(../images/dark-canvas.gif); }
+  background-image: url(../images/dark-canvas.gif);
+  font-family: "Amatic SC", cursive;
+  font-size: 2em;
+  font-weight: auto; }
 
 /* animacion titulo del index */
 .text__general {
@@ -36,8 +52,7 @@ footer {
   font-size: 4vw;
   max-width: 100%;
   padding: 0.5em;
-  color: whitesmoke;
-  animation: animate 5s linear infinite; }
+  color: whitesmoke; }
 
 /* fin titulo index */
 /* corresponde imagen y texto debajo del carrusel*/
@@ -92,7 +107,7 @@ footer {
     grid-row: span 2; }
   /* fin galeria con grid de conciertos */ }
 
-/* GAleria Paisajes utilizando mixin, extend y map */
+/* GAleria De autor utilizando mixin, extend y map */
 .paisaje__row {
   padding: 5px;
   display: flex;
@@ -203,3 +218,49 @@ footer {
   border-radius: .5em; }
 
 /* FIN FORMULARIO CONTACTO */
+.main__negro {
+  background-image: url(../images/dark-canvas.gif); }
+
+.servicios__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em;
+  padding-left: 5em;
+  padding-right: 5em;
+  overflow: hidden; }
+
+.box__servicios {
+  flex: 50%;
+  flex-direction: column;
+  padding: 2em; }
+  .box__servicios span {
+    font-size: 1em;
+    text-align: left;
+    color: whitesmoke; }
+  .box__servicios h2 {
+    text-align: left;
+    color: whitesmoke;
+    font-size: 2em;
+    padding-top: 1em; }
+  .box__servicios .img__servicios {
+    width: 100%;
+    border-radius: 0.5em;
+    border: 1px solid white;
+    box-shadow: 10px 5px 10px  white;
+    object-fit: cover; }
+
+@media (min-width: 600px) {
+  .box__servicios {
+    flex: 100%; }
+    .box__servicios h2 {
+      font-size: 2em; }
+    .box__servicios span {
+      font-size: 1em; } }
+
+@media (min-width: 800px) {
+  .box__servicios {
+    flex: 50%; }
+    .box__servicios h2 {
+      font-size: 2em; }
+    .box__servicios span {
+      font-size: 1em; } }

@@ -1,7 +1,26 @@
 header {
+  font-family: $fuentetitulos;
+  .navbar {
+    background-image: url(../images/dark-canvas.gif);
+    
+    .collapse { 
+      justify-content: center;
+      
+      
+      font-size: 1em;
+      
+    }
+  }
+    
+  }
 
-    .navbar {
-      background-image: url(../images/dark-canvas.gif);
-    }
   
-    }
+ .nav-item {
+    padding-right: 2em;
+    font-size: 2em;
+  }
+
+.navbar-nav {
+  align-items: center;
+  font-size: 1em;
+}
